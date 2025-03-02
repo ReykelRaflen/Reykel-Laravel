@@ -5,7 +5,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\NilaiController;
 
 
-
 //default routing
 Route::get('/', function () {
    return view('welcome');
@@ -48,6 +47,8 @@ Route::get('hitungusia/{nama}/{tahunlahir}',function($nama,$tahun_lahir){
 $usia = date('Y') - $tahun_lahir;
 return "<p>Hai <b>". $nama . "</b><br> usia anda sekarang adalah <b>". $usia ."</b> tahun.</p>";
 });
+
+//aaaaa
 
 
 //route with optional parameter
@@ -97,30 +98,30 @@ Route::post('/hitung-nilai', [NilaiController::class, 'hitungNilai']);
 
 Route::resource('nilai', NilaiController::class);
 
-Route::get('mahasiswa/pnp/reykel', function () {
+Route::get('mahasiswa/pnp/nauval', function () {
    echo "<p style='font-size:40;color:orange'>Politeknik Negeri Padang";
-   echo "<h1> Selamat Datang Reykel...</h1>";
+   echo "<h1> Selamat Datang Nauval...</h1>";
    echo "<hr>";
-   echo "<p> Jurusan Teknologi Informasi </p>";
+   echo "<p> Jurusan Teknologi Informasi terbaik!</p>";
 });
 
 // Authentication routes
 Route::get('/login', function() {
-  return view('auth.login');
+  return view('.auth.login');
 });
 
 Route::get('/register', function() {
-  return view('auth.register');
+  return view('.auth.register');
 });
 
-// Dashboard routes
 Route::get('/dashboard', function() {
-  return view('dashboard');
+  return view('.auth.dashboard');
 });
+
 
 // Profile management routes
 Route::get('/profile/edit', function() {
-  return view('profile.edit');
+  return view('.profile.edit');
 });
 
 Route::put('/profile/update', function() {
@@ -129,12 +130,12 @@ Route::put('/profile/update', function() {
 
 // API documentation route
 Route::get('/docs', function() {
-  return view('api.documentation');
+  return view('.api.documentation');
 });
 
 // Contact form routes
 Route::get('/contact', function() {
-  return view('contact');
+  return view('.contact');
 });
 
 Route::post('/contact/send', function() {
