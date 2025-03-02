@@ -98,11 +98,11 @@ Route::post('/hitung-nilai', [NilaiController::class, 'hitungNilai']);
 
 Route::resource('nilai', NilaiController::class);
 
-Route::get('mahasiswa/pnp/nauval', function () {
+Route::get('mahasiswa/pnp/reykel', function () {
    echo "<p style='font-size:40;color:orange'>Politeknik Negeri Padang";
-   echo "<h1> Selamat Datang Nauval...</h1>";
+   echo "<h1> Selamat Datang Reykel...</h1>";
    echo "<hr>";
-   echo "<p> Jurusan Teknologi Informasi terbaik!</p>";
+   echo "<p> Jurusan Teknologi Informasi!</p>";
 });
 
 // Authentication routes
